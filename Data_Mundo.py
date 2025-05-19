@@ -4,12 +4,12 @@ import random
 from collections import deque
 
 # ==== CONSTANTES ====
-CLASSES = [
-    "Espadachim Tecnológico",
-    "Patrulheiro do Cyber Espaço",
-    "Manipulador Digital",
-    "Restaurador Digital"
-]
+CLASSES = {
+    "Espadachim Tecnológico": {"Dados": 3, "Manutenção": 1, "Vírus": 0},
+    "Patrulheiro do Cyber Espaço": {"Dados": 1, "Manutenção": 3, "Vírus": 0},
+    "Manipulador": {"Dados": 0, "Manutenção": 0, "Vírus": 4},
+    "Restaurador": {"Dados": 2, "Manutenção": 2, "Vírus": 2}
+}
 
 ARMAS = {
     "Espada e Escudo": {"Dados": 3, "Manutenção": 3, "Vírus": 3},
@@ -45,29 +45,30 @@ def criar_ficha():
         nome = input("Nome inválido. Digite novamente: ").strip()
 
     print("\nEscolha uma classe:")
-    for i, classe in enumerate(CLASSES, 1):
-        print(f"{i}. {classe}")
+    for i, (classe, bonus) in enumerate(CLASSES.items(), 1):
+        print(f"{i}. {classe} (Bônus: {bonus})")
 
     while True:
         try:
             escolha = int(input("Número da classe: "))
             if 1 <= escolha <= len(CLASSES):
-                classe = CLASSES[escolha - 1]
+                classe = list(CLASSES.keys())[escolha - 1]
+                bonus_classe = CLASSES[classe]
                 break
             print(f"Digite um número entre 1 e {len(CLASSES)}")
         except ValueError:
             print("Entrada inválida. Digite apenas números.")
 
     pontos_restantes = TOTAL_PONTOS
-    atributos = {atributo: 0 for atributo in ATRIBUTOS}
+    atributos = bonus_classe.copy()  # Começa com os bônus da classe
 
     for atributo in ATRIBUTOS:
         while True:
             try:
                 print(f"\nAtributos atuais: {atributos} | Pontos restantes: {pontos_restantes}")
-                val = int(input(f"Pontos em {atributo}: "))
+                val = int(input(f"Pontos adicionais em {atributo}: "))
                 if 0 <= val <= pontos_restantes:
-                    atributos[atributo] = val
+                    atributos[atributo] += val
                     pontos_restantes -= val
                     break
                 print(f"Digite um valor entre 0 e {pontos_restantes}")
@@ -108,10 +109,10 @@ def criar_ficha():
 
 def gerar_inimigos():
     inimigos = deque([
-        {"nome": "Cyber Goblin", "vida": 18, "atributo_defesa": "Dados", "dano": 6},
-        {"nome": "Lobo Glitch", "vida": 20, "atributo_defesa": "Vírus", "dano": 5},
-        {"nome": "Android", "vida": 24, "atributo_defesa": "Manutenção", "dano": 8},
-        {"nome": "Bug", "cida": 10, "atributo_defesa": "vírus", "dano": 2 }
+        {"nome": "Cyber Goblin", "vida": 18, "atributo_defesa": "Dados", "dano": 10},
+        {"nome": "Lobo Glitch", "vida": 20, "atributo_defesa": "Vírus", "dano": 9},
+        {"nome": "Android", "vida": 24, "atributo_defesa": "Manutenção", "dano": 15},
+        {"nome": "Bug", "vida": 10, "atributo_defesa": "Vírus", "dano": 6}
     ])
     print("\n🚨 Inimigos encontrados:")
     for i, inimigo in enumerate(inimigos, 1):
