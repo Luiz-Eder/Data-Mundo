@@ -185,6 +185,8 @@ def combate(grupo, inimigos):
                         alvo = vivos_inimigos[escolha]
                         break
                     print(f"Digite um número entre 1 e {len(vivos_inimigos)}")
+                    if not vivos_inimigos:
+                        break
                 except ValueError:
                     print("Entrada inválida. Digite apenas números.")
 
