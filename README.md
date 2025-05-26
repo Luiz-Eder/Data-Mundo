@@ -145,5 +145,6 @@ Escolha o atributo para atacar:
 
 -Eder Luiz da Silva Ribeiro RA: 1971959 
 -Poliana Gomes Rodriguez RA: 2000444
+-Otávio Augusto Barboza Santana RA: 1999877
 
 ---
