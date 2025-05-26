@@ -38,7 +38,8 @@ def limpar():
 
 def criar_ficha():
     limpar()
-    print("🔷 Bem-vindo ao Fim do Cyber Espaço!")
+    print("Bem-vindos, humanos.")
+    print("Informe seus Usuarios para iniciarmos a sincronização de dados...")
 
     nome = input("Digite o nome do seu personagem: ").strip()
     while not nome:
