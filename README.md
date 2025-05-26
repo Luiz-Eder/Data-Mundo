@@ -144,7 +144,6 @@ Escolha o atributo para atacar:
 ## 👨‍💻 Desenvolvido por
 
 -Eder Luiz da Silva Ribeiro RA: 1971959 
--
--
+-Poliana Gomes Rodriguez RA: 2000444
 
 ---
