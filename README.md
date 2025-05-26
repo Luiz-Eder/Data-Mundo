@@ -139,7 +139,7 @@ Escolha o atributo para atacar:
 2. Manutenção (4)
 3. Vírus (2)
 
--> Athena usou Manutenção contra Android (defesa: Vírus): 8 de dano (⚡ Eficaz!)
+-> Poli usou Manutenção contra Android (defesa: Vírus): 8 de dano (⚡ Eficaz!)
 
 ## 👨‍💻 Desenvolvido por
 
