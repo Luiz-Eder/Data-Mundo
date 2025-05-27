@@ -80,8 +80,6 @@ Os mais queridos do Data_Mundo, os Restauradores são versáteis e essenciais em
 
 Bônus: Atributos equilibrados
 
-```
-
 ### Atributos
 
 - **Dados**: poder ofensivo
@@ -91,8 +89,6 @@ Bônus: Atributos equilibrados
 ### Armas
 
 Armas fornecem bônus adicionais nos atributos. Ex: Espada e Escudo (+3 em cada atributo).
-
-```
 ---
 
 ## ⚔️ Sistema de Combate
