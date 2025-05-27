@@ -3,9 +3,8 @@
 
 ## 🎓 Informações dos Integrantes
 
-- **Nome completo:** [Seu Nome Aqui]  
-- **RA:** [Seu RA Aqui]  
-- **Turma:** [Sua Turma Aqui]
+- **Nome completo:** Eder Luiz da Silva Ribeiro
+- **RA:** 1971959  
 
 ---
 
