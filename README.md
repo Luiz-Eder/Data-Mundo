@@ -3,9 +3,14 @@
 
 ## 🎓 Informações dos Integrantes
 
-- **Nome completo:** Eder Luiz da Silva Ribeiro
-- **RA:** 1971959  
+- **Nome completo:** 
+- **RA:** 
 
+- **Nome completo:** 
+- **RA:** 1971959
+
+- **Nome completo:** 
+- **RA:** 971959  
 ---
 
 ## 📖 História
@@ -60,22 +65,22 @@ O jogo simula uma aventura digital com batalhas entre heróis e inimigos virtuai
 
 Cada classe oferece bônus iniciais únicos e estilo de jogo distinto:
 
-Espadachim Tecnológico:
+** Espadachim Tecnológico:** 
 Corajosos guerreiros do Cyber Espaço que empunham espadas de todas as formas. São conhecidos por seus ataques poderosos e devastadores, capazes de romper até as barreiras de segurança mais rígidas.
 
 Bônus: Alta ofensiva de Dados
 
-Patrulheiro do Cyber Espaço:
+** Patrulheiro do Cyber Espaço:** 
 Exploradores experientes que conhecem cada canto do ambiente digital. Nunca se perdem e dizem até ouvir os sussurros da Rede, guiando seus passos por atalhos ocultos e informações valiosas.
 
 Bônus: Alta Manutenção
 
-Manipulador:
+** Manipulador:** 
 Mestres da manipulação de dados, esses especialistas parecem lançar magias — mas na verdade estão hackeando e corrompendo informações para causar caos entre os inimigos. Seu estilo é engenhoso e imprevisível.
 
 Bônus: Focado em Vírus
 
-Restaurador:
+** Restaurador:** 
 Os mais queridos do Data_Mundo, os Restauradores são versáteis e essenciais em qualquer equipe. Com habilidades de suporte e resistência, conseguem curar aliados, recuperar dados e manter o time em pé durante as batalhas mais difíceis.
 
 Bônus: Atributos equilibrados
