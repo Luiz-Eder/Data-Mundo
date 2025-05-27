@@ -1,150 +1,136 @@
-# 💾 Data_Mundo
 
-## 🌐 Um RPG de Terminal no Mundo Digital
+# 🧠 Data_Mundo - RPG Digital em Terminal
 
-**Data_Mundo** é um jogo de RPG baseado em texto, onde você cria personagens e enfrenta inimigos em um mundo digital corrompido. 
+## 🎓 Informações dos Integrantes
 
-## 📜 História
-
-No ano de 1999, durante os instantes finais antes da virada do milênio, algo inesperado aconteceu. Três humanos foram escolhidos — ou talvez acidentalmente envolvidos — em um 
-colapso digital causado por um bug desconhecido na infraestrutura global da internet. No momento em que os relógios marcaram a meia-noite, eles foram transportados para um 
-mundo misterioso e cibernético, um universo chamado Data_Mundo.
-
-Data_Mundo é um lugar onde os próprios blocos de informação tomam forma física. Dados fluem como rios luminosos, estruturas lembram chips e circuitos, e todo o ambiente pulsa 
-com a energia de um superprocessador ancestral. É um mundo onde a lógica e o caos convivem, onde fragmentos de software abandonado criam criaturas hostis, e onde erros de 
-sistema ganham vida como aberrações conhecidas como "Vírus".
+- **Nome completo:** Eder Luiz da Silva Ribeiro
+- **RA:** 1971959  
 
 ---
 
-## ⚙️ Como Jogar
+## 📖 História
 
-### ✅ Requisitos
+No ano de 1999, durante os instantes finais antes da virada do milênio, algo inesperado aconteceu. Três humanos foram escolhidos — ou talvez acidentalmente envolvidos — em um colapso digital causado por um bug desconhecido na infraestrutura global da internet. No momento em que os relógios marcaram a meia-noite, eles foram transportados para um mundo misterioso e cibernético, um universo chamado **Data_Mundo**.
 
-- Python 3.8+ instalado
-
-### ▶️ Rodando o Jogo
-
-1. Abra o terminal na pasta do arquivo.
-2. Execute o jogo com:
-
-```
-python Data_Mundo.py
-```
-
-> ❗ Execute no terminal, não no painel "Output".
+**Data_Mundo** é um lugar onde os próprios blocos de informação tomam forma física. Dados fluem como rios luminosos, estruturas lembram chips e circuitos, e todo o ambiente pulsa com a energia de um superprocessador ancestral. É um mundo onde a lógica e o caos convivem, onde fragmentos de software abandonado criam criaturas hostis, e onde erros de sistema ganham vida como aberrações conhecidas como "Vírus".
 
 ---
 
-## 🧍 Criação de Personagens
+## 🎯 Objetivo do Projeto
 
-Você criará 3 personagens, um por vez.
-
-- Escolha uma classe (com bônus únicos):
-  - Espadachim Tecnológico 
-  - Patrulheiro do Cyber Espaço 
-  - Manipulador
-  - Restaurador 
-
-- Distribua 15 pontos entre os atributos:
-  - Dados
-  - Manutenção
-  - Vírus
-
-- Escolha uma arma (oferece bônus adicionais).
-
-- A vida base é: `10 + (Atributo: Dados // 2)`
+O projeto **Data_Mundo** é um RPG por terminal desenvolvido em Python para um trabalho acadêmico, com o objetivo de aplicar de forma prática estruturas de dados como **listas**, **tuplas**, **dicionários**, **pilhas** e **filas**. Os jogadores criam personagens digitais que enfrentam inimigos cibernéticos em batalhas baseadas em turnos e atributos.
 
 ---
 
-## 🧬 Atributos
+## 🚀 Como Executar o Jogo
 
-| Atributo    | Função                                                    |
-|-------------|-----------------------------------------------------------|
-| `Dados`     | Ataque e vida                                             |
-| `Manutenção`| Velocidade no combate                                     |
-| `Vírus`     | Bônus de dano (+1 a cada 5 pontos)                        |
+### Pré-requisitos
 
----
+- Python 3.10 ou superior
+- Terminal ou prompt de comando
+- Editor de código (opcional)
 
-## ⚔️ Combate
+### Instruções
 
-- Os turnos são organizados por ordem de Manutenção.
-- Jogadores e inimigos se alternam em combate.
-- Você escolhe um inimigo e um atributo para atacar.
-- O jogo calcula o dano com base em efetividade entre atributos:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/data_mundo.git
+   cd data_mundo
+   ```
 
-### 🔄 Sistema de Fraqueza (tipo pedra-papel-tesoura)
+2. Execute o jogo:
+   ```bash
+   python data_mundo.py
+   ```
 
-- Dados > Manutenção
-- Manutenção > Vírus
-- Vírus > Dados
-
-### 🎯 Cálculo de Dano
-
-- Jogadores: `atributo_escolhido + (Vírus // 5)`
-- Inimigos: dano fixo
-
-> Efeitos:
-> - Eficaz: dano dobrado
-> - Ineficaz: dano reduzido à metade (mínimo 1)
-> - Neutro: dano normal
+3. Siga as instruções exibidas no terminal.
 
 ---
 
-## 👾 Inimigos
+## 🕹️ Como o Sistema Funciona
 
-Você enfrentará inimigos como:
+O jogo simula uma aventura digital com batalhas entre heróis e inimigos virtuais. O jogador monta um grupo com **até 3 personagens**, escolhendo:
 
-- Cyber Goblin
-- Lobo Glitch
-- Android
-- Bug
+- **Nome**
+- **Classe**
+- **Distribuição de pontos de atributos**
+- **Arma**
 
-Cada um com atributos de defesa e vida diferentes.
+### Classes disponíveis
 
----
+Cada classe oferece bônus iniciais únicos:
 
-## 💾 Estruturas Usadas
+- **Espadachim Tecnológico**: Alta ofensiva de Dados  
+- **Patrulheiro do Cyber Espaço**: Alta Manutenção  
+- **Manipulador**: Focado em Vírus  
+- **Restaurador**: Equilibrado
 
-- `deque`: Fila de inimigos e ordem de turnos
-- `list`: Pilha de ações (histórico)
-- `dict` e `tuple`: Atributos e retorno de funções
-- `random`: Escolhas de inimigos e atributos
+### Atributos
 
----
+- **Dados**: poder ofensivo
+- **Manutenção**: velocidade (define ordem de turno)
+- **Vírus**: dano extra a cada 5 pontos
 
-## 📜 Histórico
+### Armas
 
-Ao final do jogo, você verá um resumo das ações em ordem reversa (última para a primeira).
-
----
-
-## 🔁 Rejogar
-
-Ao final da partida, o jogo pergunta se você deseja jogar novamente ou encerrar.
+Armas fornecem bônus adicionais nos atributos. Ex: Espada e Escudo (+3 em cada atributo).
 
 ---
 
-## 🎯 Exemplo de Combate
+## ⚔️ Sistema de Combate
 
-Turno de Poli (Restaurador)
-Vida: 14/14
-Atributos: {'Dados': 4, 'Manutenção': 4, 'Vírus': 2}
+O combate é por turnos e segue esta lógica:
 
-Inimigos disponíveis:
-1. Android (Vida: 24)
+1. Ordem definida pelo atributo **Manutenção**
+2. O jogador escolhe um inimigo e o atributo de ataque
+3. O inimigo possui um atributo de defesa (oculto para o jogador)
 
-Escolha o atributo para atacar:
-1. Dados (4)
-2. Manutenção (4)
-3. Vírus (2)
+### Cálculo de Dano
 
--> Poli usou Manutenção contra Android (defesa: Vírus): 8 de dano (⚡ Eficaz!)
+- Dano = valor do atributo de ataque + (Vírus // 5)
+- **Efetividade**:
+  - Se o ataque for forte contra a defesa: **dano dobrado**
+  - Se for fraco: **dano reduzido à metade**
+  - Se igual: **dano normal**
 
-## 👨‍💻 Desenvolvido por
+Relação de efetividade (tipo pedra-papel-tesoura):
 
--Eder Luiz da Silva Ribeiro RA: 1971959 
--
--
+- **Dados > Manutenção > Vírus > Dados**
 
 ---
+
+## 💾 Estruturas de Dados Utilizadas
+
+### ✅ Listas
+
+- Armazenam os personagens (`jogadores`) e ações (`acoes_realizadas`)
+
+### ✅ Tuplas
+
+- Retornam múltiplos valores ao calcular dano: `(atributo, defesa, dano, efetividade)`
+
+### ✅ Dicionários
+
+- Usados para armazenar:
+  - Atributos das classes e armas
+  - Fichas dos personagens
+  - Atributos e status dos inimigos
+
+### ✅ Pilha
+
+- Histórico de ações é uma pilha (lista com `.pop()` para exibir do fim ao início)
+
+### ✅ Fila (deque)
+
+- Usada para gerenciar a **ordem de turnos** de jogadores e inimigos
+
+---
+
+## 📜 Exemplo de Fluxo
+
+1. O usuário cria 3 personagens.
+2. Escolhe suas armas e distribui pontos.
+3. Um grupo de inimigos é gerado aleatoriamente.
+4. O combate inicia com base nos atributos.
+5. Ao final da luta, o histórico de ações é exibido.
+6. O sistema pergunta se o jogador deseja jogar novamente.
