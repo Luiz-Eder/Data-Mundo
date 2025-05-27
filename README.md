@@ -54,7 +54,7 @@ O projeto **Data_Mundo** é um RPG por terminal desenvolvido em Python para um t
 
 ## 🕹️ Como o Sistema Funciona
 
-O jogo simula uma aventura digital com batalhas entre heróis e inimigos virtuais. O jogador monta um grupo com **até 3 personagens**, escolhendo:
+O jogo simula uma aventura digital com batalhas entre heróis e inimigos virtuais. O jogador monta um grupo com **3 personagens**, escolhendo:
 
 - **Nome**
 - **Classe**
@@ -149,7 +149,7 @@ Relação de efetividade (tipo pedra-papel-tesoura):
 
 1. O usuário cria 3 personagens.
 2. Escolhe suas armas e distribui pontos.
-3. Um grupo de inimigos é gerado aleatoriamente.
+3. Um grupo de inimigos é gerado.
 4. O combate inicia com base nos atributos.
 5. Ao final da luta, o histórico de ações é exibido.
 6. O sistema pergunta se o jogador deseja jogar novamente.
