@@ -1,4 +1,3 @@
-
 import os
 import random
 from collections import deque
@@ -61,7 +60,7 @@ def criar_ficha():
             print("Entrada inválida. Digite apenas números.")
 
     pontos_restantes = TOTAL_PONTOS
-    atributos = bonus_classe.copy()  # Começa com os bônus da classe
+    atributos = bonus_classe.copy()
 
     for atributo in ATRIBUTOS:
         while True:
@@ -105,7 +104,7 @@ def criar_ficha():
         "vida_maxima": vida
     }
     jogadores.append(ficha)
-    print(f"\n✅ Ficha de {nome} criada com sucesso!")
+    print(f"\nFicha de {nome} criada com sucesso!")
     input("Pressione ENTER para continuar...")
 
 def gerar_inimigos():
@@ -115,19 +114,12 @@ def gerar_inimigos():
         {"nome": "Android", "vida": 24, "atributo_defesa": "Manutenção", "dano": 15},
         {"nome": "Bug", "vida": 10, "atributo_defesa": "Vírus", "dano": 6}
     ])
-    print("\n🚨 Inimigos encontrados:")
+    print("\nInimigos encontrados:")
     for i, inimigo in enumerate(inimigos, 1):
         print(f"{i}. {inimigo['nome']} (Vida: {inimigo['vida']})")
     return inimigos
 
 def calcular_dano(atacante, alvo, atributo):
-    #O cálculo de dano segue esta lógica:
-    #Jogador: dano = atributo selecionado + (atributo Vírus // 5)
-    #Inimigo: usa dano fixo
-    # Efetividade:
-    #Se for forte contra a defesa: dobra o dano
-    #Se for fraco contra a defesa: reduz à metade (mínimo 1)
-    #Se igual: dano normal
     if "atributos" in atacante:
         base = atacante["atributos"][atributo]
         extra = atacante["atributos"]["Vírus"] // 5
@@ -143,12 +135,12 @@ def calcular_dano(atacante, alvo, atributo):
     efetividade = ""
     if EFETIVIDADE[atributo] == defesa:
         dano *= 2
-        efetividade = "⚡ Eficaz!"
+        efetividade = "Eficaz"
     elif EFETIVIDADE[defesa] == atributo:
         dano = max(1, dano // 2)
-        efetividade = "🛡️ Ineficaz!"
+        efetividade = "Ineficaz"
     else:
-        efetividade = "🎯 Normal."
+        efetividade = "Normal"
 
     return (atributo, defesa, dano, efetividade)
 
@@ -160,10 +152,10 @@ def combate(grupo, inimigos):
         vivos_jogadores = [j for j in grupo if j["vida"] > 0]
 
         if not vivos_inimigos:
-            print("\n✅ Todos os inimigos foram derrotados!")
+            print("\nTodos os inimigos foram derrotados!")
             break
         if not vivos_jogadores:
-            print("\n💀 Todos os jogadores foram derrotados!")
+            print("\nTodos os jogadores foram derrotados!")
             break
 
         for jogador in list(fila_turnos):
@@ -171,7 +163,7 @@ def combate(grupo, inimigos):
                 continue
 
             limpar()
-            print(f"\n⚔️ Turno de {jogador['nome']} ({jogador['classe']})")
+            print(f"\nTurno de {jogador['nome']} ({jogador['classe']})")
             print(f"Vida: {jogador['vida']}/{jogador['vida_maxima']}")
             print(f"Atributos: {jogador['atributos']}")
 
@@ -212,7 +204,7 @@ def combate(grupo, inimigos):
 
             print(f"\n{acao}")
             if alvo["vida"] <= 0:
-                print(f"☠️ {alvo['nome']} foi derrotado!")
+                print(f"{alvo['nome']} foi derrotado!")
                 vivos_inimigos.remove(alvo)
 
             input("\nPressione ENTER para continuar...")
@@ -231,7 +223,7 @@ def combate(grupo, inimigos):
 
             print(f"\n{acao}")
             if alvo["vida"] <= 0:
-                print(f"💀 {alvo['nome']} foi derrotado!")
+                print(f"{alvo['nome']} foi derrotado!")
                 vivos_jogadores.remove(alvo)
 
             input("\nPressione ENTER para continuar...")
@@ -241,9 +233,9 @@ def montar_grupo():
         criar_ficha()
 
     limpar()
-    print("\n🎮 Grupo Montado com Sucesso!")
+    print("\nGrupo Montado com Sucesso!")
     for jogador in jogadores:
-        print(f"\n👤 {jogador['nome']} ({jogador['classe']})")
+        print(f"\n{jogador['nome']} ({jogador['classe']})")
         print(f"  Arma: {jogador['arma']}")
         print(f"  Vida: {jogador['vida']}/{jogador['vida_maxima']}")
         print(f"  Atributos: {jogador['atributos']}")
@@ -261,16 +253,16 @@ if __name__ == "__main__":
         input("\nPressione ENTER para iniciar o combate...")
         combate(jogadores, inimigos)
 
-        print("\n📜 Histórico de Ações:")
+        print("\nHistórico de Ações:")
         while acoes_realizadas:
             print(f"- {acoes_realizadas.pop()}")
 
         while True:
-            opcao = input("\n🔁 Deseja jogar novamente? (S/N): ").strip().lower()
+            opcao = input("\nDeseja jogar novamente? (S/N): ").strip().lower()
             if opcao == "s":
                 break
             elif opcao == "n":
-                print("\n👋 Obrigado por jogar! Até a próxima.")
+                print("\nObrigado por jogar! Até a próxima.")
                 exit()
             else:
                 print("Digite S para sim ou N para não.")
