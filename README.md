@@ -3,11 +3,11 @@
 
 ## 🎓 Informações dos Integrantes
 
-- **Nome completo:** 
-- **RA:** 
+- **Nome completo: Eder Luiz da Silva Ribeiro** 
+- **RA: 1971959** 
 
-- **Nome completo:** 
-- **RA:** 1971959
+- **Nome completo: Otávio Augusto Barboza Santana** 
+- **RA:** 1999877
 
 - **Nome completo:** 
 - **RA:** 971959  
