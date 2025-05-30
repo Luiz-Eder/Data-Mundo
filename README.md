@@ -7,10 +7,10 @@
 - **RA: 1971959** 
 
 - **Nome completo: Otávio Augusto Barboza Santana** 
-- **RA:** 1999877**
+- **RA: 1999877**
 
 - **Nome completo:** 
-- **RA:** 971959**  
+- **RA: 971959**  
 ---
 
 ## 📖 História
