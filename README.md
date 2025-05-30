@@ -9,7 +9,7 @@
 - **Nome completo: Otávio Augusto Barboza Santana** 
 - **RA: 1999877**
 
-- **Nome completo: poliana gomes rodriguez** 
+- **Nome completo: Poliana Gomes Rodriguez** 
 - **RA: 2000444**  
 ---
 
